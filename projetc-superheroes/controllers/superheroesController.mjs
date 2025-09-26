@@ -3,7 +3,7 @@
  * Maneja las solicitudes HTTP y utiliza la capa de servicio para obtener los datos necesarios.
  */
 
-import { obtenerSuperheroesPorId, buscarSuperheroesPorAtributo, obtenerSuperheroesMayorDe30 } from "../services/superheroesService.mjs";
+import { obtenerSuperheroesPorId, buscarSuperheroesPorAtributo, obtenerSuperheroesMayoresDe30 } from "../services/superheroesService.mjs";
 
 import { renderizarSuperheroe, renderizarListaSuperheroes } from "../views/responseView.mjs";
 
@@ -30,6 +30,6 @@ export function buscarSuperheroesPorAtributoController(req, res) {
 }
 
 export function obtenerSuperHeroesMayoresDe30Controller(req, res) {
-    const superheroes = obtenerSuperheroesMayorDe30();
+    const superheroes = obtenerSuperheroesMayoresDe30();
     res.send(renderizarListaSuperheroes(superheroes));
 }

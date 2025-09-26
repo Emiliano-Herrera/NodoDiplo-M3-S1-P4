@@ -16,10 +16,10 @@ export function obtenerSuperheroesPorId(id) {
 export function buscarSuperheroesPorAtributo(atributo, valor) {
     const superheroes = repository.obtenerTodos();
     return superheroes.filter(hero => String(hero[atributo]).toLowerCase().includes(valor.toLowerCase()));
-}
+};
 
-export function obtenerSuperheroesMayorDe30() {
+export function obtenerSuperheroesMayoresDe30(){
     const superheroes = repository.obtenerTodos();
-    return superheroes.filter(hero => hero.edad > 30);
-}
-
+    return superheroes.filter(hero =>
+        hero.edad > 30 && hero.planetaOrigen === "Tierra" && hero.poder.length >= 2);
+};

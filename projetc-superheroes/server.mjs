@@ -13,7 +13,7 @@ const PORT = 3005;
 // RUTAS
 app.get('/superheroes/id/:id', obtenerSuperheroePorIdController);
 app.get('/superheroes/atributo/:atributo/valor/:valor', buscarSuperheroesPorAtributoController);
-app.get('/superheroes/mayoresDe30', obtenerSuperHeroesMayoresDe30Controller);
+app.get('/superheroes/edad/mayoresDe30', obtenerSuperHeroesMayoresDe30Controller);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
